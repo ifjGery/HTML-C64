@@ -10,5 +10,5 @@ npm run build
 
 ## demo
 
-after building, open the `index.html`, thats all
+after building, open the `index.html`, thats all \
 for the possible glyphs open `glyph.html`
