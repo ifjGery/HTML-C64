@@ -6,6 +6,24 @@
         <link rel="stylesheet" type="text/css" href="style/c64.css">
     </head>
     <body class="c-mid-blue bc-dark-blue">
+        <script src="script/slider.js"></script>
+        <br />
+        <div class="align-center">**** C64 HTML Inputs Demo Page ****</div><br />
 
+        <!-- SLIDER -->
+        Slider: 
+        <div class="input-slider">
+            <div class="empty c-light-blue"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"></span><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"></span></div>
+            <div class="filled c-purple"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"></span><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"></span></div>
+            <div class="ball c-white"><span class="glyph-A0"></span></div>
+            <input class="slider" type="range" min="0" max="29" step="1" value="0" />
+        </div>
+        
+
+        <script>
+            Array.from(document.getElementsByClassName('input-slider')).forEach(element => {
+                initSlider(element);
+            });
+        </script>
     </body>
 </html>
