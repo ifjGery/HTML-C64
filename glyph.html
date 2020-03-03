@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>C64 style guide</title>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" href="./style/c64.css">
+        <style>
+            #glyph-map {
+                display: flex;
+                flex-wrap: wrap;
+                width: calc(1em * 16 * 2 + 0.5em * 16 * 2 * 2);
+            }
+
+            .glyph {
+                padding: 1em;
+            }
+
+            .glyph span {
+                display: block;
+            }
+
+            .glyph span[class^="glyph-"] {
+                width: 1em;
+                height: 1em;
+                font-size: 2em;
+            }
+
+            .glyph span.glyph-value {
+                font-size: 1em;
+            }
+        </style>
+    </head>
+    <body class="c-mid-blue bc-dark-blue">
+        <div id="glyph-map">
+        </div>
+        <script>
+            let container = document.getElementById('glyph-map');
+            for(let i = 0; i < 256; i++) {
+                let hex = ("00" + i.toString(16)).slice(-2).toUpperCase();
+                let box = document.createElement("div");
+                box.className = "glyph bc-dark-blue c-mid-blue";
+
+                let glyph = document.createElement("span");
+                glyph.className = "glyph-" + hex;
+
+                let value = document.createElement("span");
+                value.className = "glyph-value"
+                value.innerText = hex;
+
+                box.appendChild(glyph);
+                box.appendChild(value);
+                container.appendChild(box);
+            }
+        </script>
+    </body>
+</html>

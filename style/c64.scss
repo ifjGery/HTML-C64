@@ -1,0 +1,100 @@
+/** colors are from https://gist.github.com/funkatron/758033 */
+$black:       #000000;
+$white:       #FFFFFF;
+$red:         #68372B;
+$light-blue:  #70A4B2;
+$purple:      #6F3D86;
+$green:       #588D43;
+$dark-blue:   #352879;
+$yellow:      #B8C76F;
+$brown:       #6F4F25;
+$dark-brown:  #433900;
+$light-red:   #9A6759;
+$dark-grey:   #444444;
+$mid-grey:    #6C6C6C;
+$light-green: #9AD284;
+$mid-blue:    #6C5EB5;
+$light-grey:  #959595;
+
+$colors: (
+    "black": $black,
+    "white": $white,
+    "red": $red,
+    "light-blue": $light-blue,
+    "purple": $purple,
+    "green": $green,
+    "dark-blue": $dark-blue,
+    "yellow": $yellow,
+    "brown": $brown,
+    "dark-brown": $dark-brown,
+    "light-red": $light-red,
+    "dark-grey": $dark-grey,
+    "mid-grey": $mid-grey,
+    "light-green": $light-green,
+    "mid-blue": $mid-blue,
+    "light-grey": $light-grey
+);
+
+/** dec to hex is from: https://stackoverflow.com/questions/15961089/how-to-convert-integer-to-hex-in-sass */
+@function dec-to-hex($d) {
+    $hexVals: "A" "B" "C" "D" "E" "F";
+    $base: 16;
+    $quotient: $d;
+    $result: "";
+    @if $d == 0 {
+        $result: "00";
+    }
+    @while $quotient != 0 {
+        $mod: $quotient % $base;
+        $quotient: floor($quotient / $base);
+        @if $mod > 9 {
+            $mod: nth($hexVals, $mod - 9);
+        }
+        @if $d < $base {
+            $result: "0" + $mod;
+        } @else {
+            $result: $mod + $result;
+        }
+    }
+    @return $result;
+}
+
+/** unicode is from https://stackoverflow.com/questions/30421570/sass-unicode-escape-is-not-preserved-in-css-file */
+@function unicode($str) {
+    @return unquote("\"")+unquote(str-insert($str, "\\", 1))+unquote("\"");
+}
+
+@mixin color-modifiers($attribute: 'color') {
+    @each $name, $hex in $colors {
+        &-#{$name} {
+            #{$attribute}: $hex;
+        }
+    }
+}
+
+@mixin glyph-list {
+    @for $i from 0 through 255 {
+        .glyph-#{dec-to-hex($i)}::after { 
+            content: unicode("#{'EE' + dec-to-hex($i)}");
+        }
+    }
+}
+
+@font-face {
+    font-family: C64_Pro_Mono;
+    src: url('../font/C64_Pro_Mono-STYLE.eot');
+    src: url('../font/C64_Pro_Mono-STYLE.woff2') format('woff2'),
+         url('../font/C64_Pro_Mono-STYLE.woff') format('woff'),
+         url('../font/C64_Pro_Mono-STYLE.ttf') format('truetype'),
+         url('../font/C64_Pro_Mono-STYLE.otf') format('opentype');
+}
+
+.c {
+    @include color-modifiers();
+}
+
+.bc {
+    @include color-modifiers($attribute: 'background-color');
+}
+
+@include glyph-list;

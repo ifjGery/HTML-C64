@@ -1,0 +1,11 @@
+@import 'c64';
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    border: 4em solid $mid-blue;
+    font-family: "C64_Pro_Mono";
+}
