@@ -8,72 +8,105 @@
     <body class="c-mid-blue bc-dark-blue">
         <script src="script/slider.js"></script>
         <script src="script/radio.js"></script>
+        <script src="script/checkbox.js"></script>
         <br />
         <div class="align-center">**** C64 HTML Inputs Demo Page ****</div><br />
 
         <!-- SLIDER -->
         Slider: 
-        <div class="input-slider">
-            <div class="empty"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"></span><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"><span class="glyph-57"></span></div>
-            <div class="filled"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"></span><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"><span class="glyph-51"></span></div>
-            <div class="ball"><span class="glyph-A0"></span></div>
+        <span class="input-slider">
+            <span class="empty"><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span><span class="glyph-57"></span></span>
+            <span class="filled"><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span><span class="glyph-51"></span></span>
+            <span class="ball"><span class="glyph-A0"></span></span>
             <input class="slider" type="range" min="0" max="29" step="1" value="0" />
-        </div><br />
+        </span><br />
         
         <!-- BUTTON -->
         Button: 
         <input class="input-button" type="button" value="Praise the C-64"><br />
 
         <!-- RADIO -->
-        Radio buttons group 1:<br>
-        <div class="input-radio">
-            <span class="empty"><span class="glyph-51"></span></span>
-            <span class="filled"><span class="glyph-57"></span></span>
-            <input type="radio" name="test" value="1">
-        </div><span>First radio button</span><br />
-        <div class="input-radio">
-            <span class="empty"><span class="glyph-51"></span></span>
-            <span class="filled"><span class="glyph-57"></span></span>
-            <input type="radio" name="test" value="2">
-        </div><span>Another button</span><br />
-        <div class="input-radio">
-            <span class="empty"><span class="glyph-51"></span></span>
-            <span class="filled"><span class="glyph-57"></span></span>
-            <input type="radio" name="test" value="3">
-        </div><span>Last of this type</span><br />
+        <div class="flex-container">
+            <div class="flex-element flex-width-25">
+                Radio buttons group 1:<br>
+                <span class="input-radio">
+                    <span class="empty"><span class="glyph-51"></span></span>
+                    <span class="filled"><span class="glyph-57"></span></span>
+                    <input type="radio" name="test" value="1">
+                </span><span>First radio button</span><br />
+                <span class="input-radio">
+                    <span class="empty"><span class="glyph-51"></span></span>
+                    <span class="filled"><span class="glyph-57"></span></span>
+                    <input type="radio" name="test" value="2">
+                </span><span>Another button</span><br />
+                <span class="input-radio">
+                    <span class="empty"><span class="glyph-51"></span></span>
+                    <span class="filled"><span class="glyph-57"></span></span>
+                    <input type="radio" name="test" value="3">
+                </span><span>Last of this type</span>
+            </div>
+            <div class="flex-element">
+                Radio buttons group 2:<br>
+                <span class="input-radio">
+                    <span class="empty"><span class="glyph-51"></span></span>
+                    <span class="filled"><span class="glyph-57"></span></span>
+                    <input type="radio" name="test2" value="1">
+                </span><span>First radio button</span><br />
+                <span class="input-radio">
+                    <span class="empty"><span class="glyph-51"></span></span>
+                    <span class="filled"><span class="glyph-57"></span></span>
+                    <input type="radio" name="test2" value="2">
+                </span><span>Another button</span><br />
+                <span class="input-radio">
+                    <span class="empty"><span class="glyph-51"></span></span>
+                    <span class="filled"><span class="glyph-57"></span></span>
+                    <input type="radio" name="test2" value="3">
+                </span><span>Last of this type</span>
+            </div>
+        </div>
 
-        Radio buttons group 2:<br>
-        <div class="input-radio">
-            <span class="empty"><span class="glyph-51"></span></span>
-            <span class="filled"><span class="glyph-57"></span></span>
-            <input type="radio" name="test2" value="1">
-        </div><span>First radio button</span><br />
-        <div class="input-radio">
-            <span class="empty"><span class="glyph-51"></span></span>
-            <span class="filled"><span class="glyph-57"></span></span>
-            <input type="radio" name="test2" value="2">
-        </div><span>Another button</span><br />
-        <div class="input-radio">
-            <span class="empty"><span class="glyph-51"></span></span>
-            <span class="filled"><span class="glyph-57"></span></span>
-            <input type="radio" name="test2" value="3">
-        </div><span>Last of this type</span><br />
+        <!-- CHECKBOX -->
+        <span class="input-checkbox">
+            <span class="empty"><span class="glyph-A0"></span></span>
+            <span class="filled"><span class="glyph-D6"></span></span>
+            <input type="checkbox" value="1">
+        </span><span>Just a checkbox</span><br />
+        <span class="input-checkbox">
+            <span class="empty"><span class="glyph-A0"></span></span>
+            <span class="filled"><span class="glyph-D6"></span></span>
+            <input type="checkbox" value="1">
+        </span><span>That you can mark</span><br />
+        <span class="input-checkbox">
+            <span class="empty"><span class="glyph-A0"></span></span>
+            <span class="filled"><span class="glyph-D6"></span></span>
+            <input type="checkbox" value="1">
+        </span><span>Or unmark</span><br />
 
-        <div class="input-checkbox">
-            <span class="empty"><span class="glyph-A0"></span></span>
-            <span class="filled"><span class="glyph-D6"></span></span>
-            <input type="checkbox" value="1">
-        </div><span>Just a checkbox</span><br />
-        <div class="input-checkbox">
-            <span class="empty"><span class="glyph-A0"></span></span>
-            <span class="filled"><span class="glyph-D6"></span></span>
-            <input type="checkbox" value="1">
-        </div><span>That you can mark</span><br />
-        <div class="input-checkbox">
-            <span class="empty"><span class="glyph-A0"></span></span>
-            <span class="filled"><span class="glyph-D6"></span></span>
-            <input type="checkbox" value="1">
-        </div><span>Or unmark</span><br />
+        <!-- TEXT -->
+        Text input: 
+        <input class="input-text type="text" /><br />
+
+        <!-- SELECT -->
+        <span class="input-select">
+            <span class="current">first</span><span class="select-button glyph-1E r-180"></span>
+            <span class="list">
+                <ul>
+                    <li>first</li>
+                    <li>in</li>
+                    <li>the</li>
+                    <li>story of life</li>
+                </ul>
+            </span>
+            <select id="test3">
+                <option value="1">first</option>
+                <option value="2">in</option>
+                <option value="3">the</option>
+                <option value="4">story of life</option>
+            </select><br />
+        </span>
+        
+
+        
 
 
         <script>
@@ -83,7 +116,11 @@
 
             Array.from(document.getElementsByClassName('input-radio')).forEach(element => {
                 initRadio(element);
-            });            
+            });
+
+            Array.from(document.getElementsByClassName('input-checkbox')).forEach(element => {
+                initCheckbox(element);
+            });
         </script>
     </body>
 </html>

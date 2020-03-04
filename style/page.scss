@@ -1,5 +1,23 @@
 @import 'c64';
 
+.flex-container {
+    display: flex;
+}
+
+.flex-element {
+    border: 0;
+}
+
+@mixin flex-width-generator {
+    @for $i from 1 through 50 {
+        .flex-width-#{$i} {
+            width: #{$i}em;
+        }
+    }
+}
+
+@include flex-width-generator;
+
 * {
     padding: 0;
     margin: 0;
@@ -13,6 +31,23 @@ body {
     width: calc(100% - 2em * 2);
     min-height: calc(100% - 2em * 2);
     line-height: 1em;
+}
+
+span {
+    vertical-align: bottom;
+}
+
+.r-180 {
+    transform: rotate(180deg);
+    display: inline-block;
+}
+
+.svg-glyph {
+    height: 1em;
+
+    path {
+        fill: $mid-blue;
+    }
 }
 
 .align-center {
@@ -64,6 +99,7 @@ body {
     font-family: "C64_Pro_Mono";
     color: $dark-blue;
     background-color: $white;
+    position: relative;
 
     &:focus {
         outline: none;
@@ -79,6 +115,7 @@ body {
 }
 
 .input-radio {
+    overflow: hidden;
     color: $white;
     position: relative;
     display: inline-block;
@@ -139,5 +176,29 @@ body {
     .filled {
         position: absolute;
         left: 0;
+    }
+}
+
+.input-text {
+    border: 0;
+    font-size: 1em;
+    font-family: "C64_Pro_Mono";
+    position: relative;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:active {
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.input-select {
+
+    .list {
+        padding-right: 1em;
     }
 }
