@@ -1,6 +1,14 @@
 # HTML-C64
 C64 styled inputs for the modern web
 
+## it has
+* slider
+* button
+* radio button
+* checkbox
+* text input
+* select (drop down)
+
 ## build it
 
 ```
