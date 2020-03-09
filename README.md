@@ -12,3 +12,7 @@ npm run build
 
 after building, open the `index.html`, thats all \
 for the possible glyphs open `glyph.html`
+
+## preview 
+
+![demo](/asset/c64_demo.png)
