@@ -9,6 +9,7 @@
         <script src="script/slider.js"></script>
         <script src="script/radio.js"></script>
         <script src="script/checkbox.js"></script>
+        <script src="script/select.js"></script>
         <br />
         <div class="align-center">**** C64 HTML Inputs Demo Page ****</div><br />
 
@@ -88,22 +89,20 @@
 
         <!-- SELECT -->
         <span class="input-select">
-            <span class="current">first</span><span class="select-button glyph-1E r-180"></span>
-            <span class="list">
-                <ul>
-                    <li>first</li>
-                    <li>in</li>
-                    <li>the</li>
-                    <li>story of life</li>
-                </ul>
-            </span>
+            <span class="current bc-white c-dark-blue"></span><span class="select-button glyph-1E r-180 bc-white c-black"></span>
+            <ul class="list bc-light-blue c-dark-blue hidden">
+            </ul>
             <select id="test3">
                 <option value="1">first</option>
                 <option value="2">in</option>
                 <option value="3">the</option>
                 <option value="4">story of life</option>
-            </select><br />
-        </span>
+            </select>
+        </span><br />
+
+        <div>
+            Some kind of thext is due here
+        </div>
         
 
         
@@ -120,6 +119,10 @@
 
             Array.from(document.getElementsByClassName('input-checkbox')).forEach(element => {
                 initCheckbox(element);
+            });
+
+            Array.from(document.getElementsByClassName('input-select')).forEach(element => {
+                initSelect(element);
             });
         </script>
     </body>

@@ -197,8 +197,45 @@ span {
 }
 
 .input-select {
+    display: inline-block;
+    position: relative;
+
+    .current {
+        display: inline-block;
+        width: calc(100% - 1em);
+    }
 
     .list {
-        padding-right: 1em;
+        position: absolute;
+        z-index: 1;
+
+        li {
+            padding-right: 2em;
+            list-style-type: none;
+
+            &:hover {
+                background-color: $white;
+            }
+        }
+
+        &.hidden {
+            display: none;
+        }
+    }
+
+    select {
+        border: 0;
+        font-family: "C64_Pro_Mono";
+        font-size: 1em;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+
+        position: relative;
+        height: 0;
+        opacity: 0;
+        pointer-events: none;
+        top: 0;
+        padding-right: 2em;
+        display: block;
     }
 }
